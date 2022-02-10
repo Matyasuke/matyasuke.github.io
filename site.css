@@ -1,42 +1,98 @@
-<HTML>
-<HEAD>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8N">
-    <meta http-equiv="Content-Language" content="ja">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="site.css">
-    <TITLE>個人サイト</TITLE>
-</HEAD>
-<body>
-	<header>
-		<img src="images/logo.png"width=80% height=100%>
-	</header>
-	<nav id="menubar">
-		<ul>
-		<li><a href="#">HOME</a></li>
-		<li><a href="#">NEWS</a></li>
-		<li><a href="#">MATSUE</a></li>
-		<li><a href="#">ANOTHER</a></li>
-		</ul>
-	</nav>
-	<div id="container">
-		<div id="contents">
-			コンテンツエリア
-			<br>ここに文章<br><br><br><br><br><br>
-		</div>
-		<div id="menu">
-			<section id="intro">
-			<img src="images/prof.png" class="icon">
-			<p>自己紹介</p>
-			18歳学生。掃除が好きです。
-			</section>
-			<a class="twitter-timeline" data-lang="ja" data-height="400" href
-			="https://twitter.com/matyaMikan?ref_src=twsrc%5Etfw">Tweets by matyaMikan</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-	</div>
-	<footer>
-		<small><a href="index.html">みかんちのブログ</a><br>&copy;MattyaMikan</small>
-	</footer>
-</body>
-</HTML>
+@charset "utf-8N";
+*{
+margin:0;
+padding:0px;
+}
+.icon{
+	width: 100%;
+}
+body{
+	background-color: #024873;
+}
+a {
+	color: #BF9D7E;	/*リンクテキストの色*/
+	transition: 0.3s;	/*マウスオン時の移り変わるまでの時間設定。0.3秒。*/
+}
+a:hover {
+	color: #b4ae99;	/*マウスオン時の文字色*/
+}
+h1{
+	/*background-color: #b0c4de;*/
+	text-align: center;
+	font-size: 40px;
+}
+h2{
+	color: #ff0000;
+}
+header{
+	margin: 0px 0;
+	text-align: center;
+	height: 40%;
+	background-color: #BF9D7E;
+}
+#intro{
+	padding: 3px;
+	margin: 5px;
+	text-align: center;
+	background-color: #ebf4f9;
+}
+#forpic{
+	margin: 20px auto;
+	text-align: center;
+}
+#menubar {
+	margin: 20 0 20 0;
+	text-align: center;		/*文字をセンタリング*/
+	font-size: 30px;		/*文字サイズ*/
+	/*margin-bottom: 20px;	下に空けるスペース*/
+	background-color: #0487D9;
+}
+#menubar li {
+	display: inline;	/*横並びにする設定*/
+	background-color: #0487D9;
+}
+#menubar li a {
+	text-decoration: none;
+	padding: 1px 30px;	/*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+}
+/*マウスオン時の設定*/
+#menubar li a:hover {
+	color: #BF9D7E;	/*文字色*/
+	border-bottom: 3px solid #bf9d7e;	/*下線の幅、線種、色*/
+}
+#container{
+	margin: 0 auto;
+	max-width: 1200px;
+	display: flex;
+	word-break : break-all;
+	padding: 6px;
+	background-color: #0487D9;
+}
+#contents{
+	padding: 5px;
+	text-align: left;
+	margin: 5px;
+	width: 70%;
+	float: left;
+	background-color: #ebf4f9;
+}
+#menu{
+	padding: 5px;
+	margin: 5px;
+	width: 30%;
+	float: left;
+	background-color: #ebf4f9;
+}
+footer{
+	clear: both;
+	text-align: center;
+	background-color: #7fffd4;
+}
+.pic{
+	width: 50%;
+	height: auto;
+}
+/*---------------------------------------------------------------*/
+@media screen and (max-width:480px){
+	
+}
