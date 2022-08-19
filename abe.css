@@ -1,0 +1,10 @@
+@charset "utf-8N";
+.menu{
+	background-color: #ff0000;
+	width: 140;
+	float: left;
+}
+.contents{
+	background-color: #00ff00;
+	width: 450;
+}
