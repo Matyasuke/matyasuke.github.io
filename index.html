@@ -1,42 +1,70 @@
-<HTML>
-<HEAD>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8N">
-    <meta http-equiv="Content-Language" content="ja">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="site.css">
-    <TITLE>Matyasuke's page</TITLE>
-</HEAD>
-<body>
-	<header>
-		<!-- <img src="images/logo.png"width=80% height=100%> -->
-	</header>
-	<nav id="menubar">
-		<ul>
-		<li><a href="#">HOME</a></li>
-		<li><a href="#">NEWS</a></li>
-		<li><a href="#">MATSUE</a></li>
-		<li><a href="#">ANOTHER</a></li>
-		</ul>
-	</nav>
-	<div id="container">
-		<div id="contents">
-			コンテンツエリア
-			<br>ここに文章<br><br><br><br><br><br>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap.css">
+		<title>Kuma's page</title>
+	</head>
+ 	<body style="padding-top: 5rem">
+		
+		<div class="page-header">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Kuma</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					  <a class="nav-link active" href="#ToProject">Project</a>
+					<li class="nav-item">
+					  <a class="nav-link active" href="#ToProf">Prof</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="#ToResearch">Research</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="#ToContact">Contact</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+		
 		</div>
-		<div id="menu">
-			<section id="intro">
-			<img src="images/prof.png" class="icon">
-			<p>自己紹介</p>
-			test。
-			</section>
-			<a class="twitter-timeline" data-lang="ja" data-height="400" href
-			="https://twitter.com/ryosunosan?ref_src=twsrc%5Etfw">Tweets by ryosunosan</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<div class="container">
+   <h1>Kuma's page</h1> 　
+    <p>Done is better than perfect.</p>
+		<!--<div class="shadow p-3 mb-5 bg-body rounded">-->
+        <div class="shadow p-3 mb-5 bg-body rounded card" id="Todoing">
+			<div><h2>事業</h2><p>我々はこれを開発しています。</p>
+			<a href="#" class="btn btn-secondary disabled" aria-disabled="true">Details</a>
+			</div>
+		</div>
+		<div class="shadow p-3 mb-5 bg-body rounded card" id="ToProf">
+			<div class="card-body">
+			<div class="card-title"><h2>Profile</h2></div><p class="card-text">私のプロフィールです。</p>
+			<a href="prof.html" class="btn btn-primary">Details</a>
+			</div>
+		</div>
+		<div class="shadow p-3 mb-5 bg-body rounded card" id="ToResearch">
+			<div class="card-body">
+			<div class="card-title"><h2>Research</h2></div><p class="card-text">研究についてです。</p>
+			<a href="#" class="btn btn-secondary disabled" aria-disabled="true">Details</a>
+			</div>
+		</div>
+		<div class="shadow p-3 mb-5 bg-body rounded card" id="ToContact">
+			<div class="card-body">
+			<div class="card-title"><h2>Contact</h2></div><p class="card-text">連絡はこちら。</p>
+			<a href="#" class="btn btn-secondary disabled" aria-disabled="true">Details</a>
+			</div>
 		</div>
 	</div>
-	<footer>
-		<small><a href="index.html">Matyasuke</a><br>&copy;MattyaMikan</small>
-	</footer>
-</body>
-</HTML>
+    <footer>
+        <p>© 2023 kuma-ch. All rights reserved.</p>
+    </footer>
+	<!-- jsinclude -->
+	<script src="bootstrap.bundle.js"></script>
+	</body>
+</html>
