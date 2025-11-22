@@ -7,5 +7,5 @@
 */
 .nav-bg {
   background: linear-gradient(135deg, #DCD3B2, #007AAC);
-  opacity: 0.8; /* 要素全体が80%の不透明度になる */
+  opacity: 0.9; /* 要素全体が80%の不透明度になる */
 }
