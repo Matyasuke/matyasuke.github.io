@@ -1,11 +1,1 @@
-/*.nav-bg {background: linear-gradient(135deg,#DCD3B2,#007AAC)}*/
 
-/* 変更後：rgba() を使用 */
-/*.nav-bg {
-  background: linear-gradient(135deg, rgba(220, 211, 178, 0.8), rgba(0, 122, 172, 0.8));
-}
-*/
-.nav-bg {
-  background: linear-gradient(135deg, #DCD3B2, #007AAC);
-  opacity: 0.9; /* 要素全体が80%の不透明度になる */
-}
