@@ -41,12 +41,17 @@
     </div>
 
     <!-- メインコンテンツ -->
+
     <div class="container flex-grow-1">
-      <div class="mt-4 mb-4"><h1>Ryo's page</h1></div>
+      <div class="mt-4 mb-4"><h1>Ryou's page</h1></div>
+
+      <p>
+      <a href="/English.html">English version is here.</a>
+      </p>
+
       <span class="mt-4 mb-5 fs-5 fst-italic">The first step towards getting somewhere is to decide that you are not going to stay where you are.</span>
       <div class="fst-italic text-end">--John Pierpont Morgan--</div>
       <p></p>
-
       <!-- 寄付カード -->
       <div class="shadow p-3 mb-5 bg-body rounded card">
         <div class="card-title"><h3>寄付について</h3></div>
