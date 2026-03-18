@@ -10,22 +10,22 @@
       
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/images/header1.jpg" class="d-block w-100" alt="風景" @error="handleImageError">
+          <img src="/images/header1.jpg" class="d-block w-100" alt="画像1" style="height: 450px; object-fit: cover;" @error="handleImageError">
           <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
+            <h5>Otsuka museum</h5>
             <p></p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/images/header2.jpg" class="d-block w-100" alt="風景" @error="handleImageError">
+          <img src="/images/header2.jpg" class="d-block w-100" alt="画像2" style="height: 450px; object-fit: cover; background:#000" @error="handleImageError">
           <div class="carousel-caption d-block">
-            <h2></h2>
+            <h5>Sensuijima</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/images/header3.png" class="d-block w-100" alt="images" @error="handleImageError">
+          <img src="/images/header3.jpg" class="d-block w-100" alt="画像3" style="height: 450px; object-fit: cover;" @error="handleImageError">
           <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
+            <h5>Ritsurin Park</h5>
             <p></p>
           </div>
         </div>
@@ -45,58 +45,43 @@
     <div class="container flex-grow-1">
       <div class="mt-4 mb-4"><h1>Ryou's page</h1></div>
 
+      <span class="mt-4 mb-5 fs-5 fst-italic">
+      The 'u' in Ryou is intentional.
+      </span>
+      <span class="mt-4 mb-5 fs-5 fst-italic">
       <p>
       <a href="/English.html">English version is here.</a>
       </p>
-
-      <span class="mt-4 mb-5 fs-5 fst-italic">The first step towards getting somewhere is to decide that you are not going to stay where you are.</span>
-      <div class="fst-italic text-end">--John Pierpont Morgan--</div>
-      <p></p>
-      <!-- 寄付カード -->
-      <div class="shadow p-3 mb-5 bg-body rounded card">
-        <div class="card-title"><h3>寄付について</h3></div>
-        <p>
-          こちらが私のEthereumアドレスです。よろしければご寄付お願いします。<br>This is my Ethereum address. Please feel free to make a donation.
-        </p>
-        <div style="display: flex; gap: 10px; justify-content: flex-end;">
-          <input type="text" 
-            v-model="walletAddress"
-            readonly 
-            style="flex:1; padding: 3px; border: 0.5px solid #ccc; border-radius: 5px; background-color: #f9f9f9; color: #212529;">
-          
-          <button 
-            @click="copyToClipboard" 
-            :class="['btn', copyStatus.class]"
-            style="width: 100px; height: 35px;">
-            <div class="text-center">{{ copyStatus.text }}</div>
-          </button>
-        </div>
+      </span>
+      <div class="text-center my-5">
+        <a href="https://buymeacoffee.com/kumasuke"><img src="/images/bmc-button.png" alt="Buy me a coffee" height="60"></a>
       </div>
 
       <!-- 事業カード -->
-      <div class="shadow p-3 mb-5 bg-body rounded card">
+      <div class="p-2 mb-3 bg-body">
         <div class="card-body">
           <div class="card-title"><h2>事業</h2></div>
-          <p>私の開発物です。</p>
+          <p>私の開発物です。
+          </p>
           <div class="text-end">
             <a href="#" class="btn btn-secondary disabled" aria-disabled="true">Details</a>
           </div>
         </div>
       </div>
-
+      <hr>
       <!-- Profileカード -->
-      <div class="shadow p-3 mb-5 bg-body rounded card">
+      <div class="p-2 mb-3 bg-body rounded">
         <div class="card-body">
-          <div class="card-title"><h2>Profile</h2></div>
+          <div class="card-title"><h2>プロフィール</h2></div>
           <p class="card-text">私のプロフィールです。</p>
           <div class="text-end">
             <NuxtLink to="/prof" class="btn btn-primary">Details</NuxtLink>
           </div>
         </div>
       </div>
-
+      <hr>
       <!-- Researchカード -->
-      <div class="shadow p-3 mb-5 bg-body rounded card">
+      <div class="p-2 mb-3 bg-body">
         <div class="card-body">
           <div class="card-title"><h2>Research</h2></div>
           <p class="card-text">研究についてです。</p>
@@ -105,9 +90,9 @@
           </div>
         </div>
       </div>
-
+      <hr>
       <!-- Contactカード -->
-      <div class="shadow p-3 mb-5 bg-body rounded card">
+      <div class="p-3 mb-3 bg-body">
         <div class="card-body">
           <div class="card-title"><h2>Contact</h2></div>
           <p class="card-text">連絡はこちら。</p>
@@ -115,6 +100,7 @@
             <NuxtLink to="/contact" class="btn btn-primary">Details</NuxtLink>
           </div>
         </div>
+        <hr>
       </div>
     </div>
   </div>
@@ -122,29 +108,6 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-
-const walletAddress = ref('0xbf3e76614b909382690236af1cb084baec65aef8')
-const copyStatus = reactive({
-  text: 'Copy',
-  class: 'btn-success'
-})
-
-const copyToClipboard = () => {
-  navigator.clipboard.writeText(walletAddress.value).then(() => {
-    const originalText = 'Copy'
-    const originalClass = 'btn-success'
-
-    copyStatus.text = 'Copied!'
-    copyStatus.class = 'btn-primary'
-
-    setTimeout(() => {
-      copyStatus.text = originalText
-      copyStatus.class = originalClass
-    }, 2000)
-  }).catch(err => {
-    console.error('コピーに失敗しました: ', err)
-  })
-}
 
 const handleImageError = (e) => {
   e.target.style.backgroundColor = '#ccc';

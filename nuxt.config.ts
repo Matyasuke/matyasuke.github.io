@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
+  modules: ['nuxt-gtag'],
+  gtag: {
+    id: 'G-GJ82SDZEXZ'
+  },
   app: {
     head: {
       title: "Kuma's page",
@@ -8,21 +13,10 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ],
       link: [
-        // public/vendorに配置したBootstrap CSSを読み込み
         { rel: 'stylesheet', href: '/vendor/bootstrap.css' }
       ],
       script: [
-        // Google Analytics (GTM)
-        { src: 'https://www.googletagmanager.com/gtag/js?id=G-GJ82SDZEXZ', async: true },
-        {
-          children: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-GJ82SDZEXZ');
-          `
-        },
-        // Bootstrap Bundle JS (bodyの最後で読み込み)
+        // GAの記述はモジュールがやってくれるのでここから削除！
         { src: '/vendor/bootstrap.bundle.js', body: true }
       ]
     }

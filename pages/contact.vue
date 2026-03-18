@@ -1,7 +1,7 @@
 <template>
   <div class="container flex-grow-1">
     <!-- <p> タグを <div> に変更 -->
-    <div class="mb-3">
+    <div class="my-3">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><NuxtLink to="/">ホーム</NuxtLink></li>
@@ -15,9 +15,8 @@
       <h1>Contact</h1>
     </div>
 
-    <!-- 文字列だけなら <p> タグでOK -->
     <p>
-      メールアドレス: <s>deleted</s>
+      メールアドレス : <s>deleted</s>
     </p>
   </div>
 </template>
